@@ -1,24 +1,30 @@
 import 'package:flutter/material.dart';
 
-class mainpage extends StatefulWidget {
-  const mainpage({
+class Mainpage extends StatefulWidget {
+  const Mainpage({
     super.key,
   });
 
   @override
-  State<mainpage> createState() => _mainpageState();
+  State<Mainpage> createState() => _MainpageState();
 }
 
 DateTime now = DateTime.now();
 DateTime yesterday = now.subtract(const Duration(days: 1));
 
-class _mainpageState extends State<mainpage> {
+class _MainpageState extends State<Mainpage> {
   showCal() async {
     var dt = await showDatePicker(
         context: context,
-        initialDate: DateTime.now(),
-        firstDate: DateTime(2006, 1, 1),
+        initialDate: DateTime(2023),
+        firstDate: DateTime(2023, 1, 1),
         lastDate: yesterday);
+
+    String ddtt = dt.toString().split(' ')[0].replaceAll('-', '');
+    // var movieApi = MovieApi();
+    // var api = MovieApi();
+    // var movies = await api.getmovie(keyword: ddtt);
+    print(ddtt);
   }
 
   @override

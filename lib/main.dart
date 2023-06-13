@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'main_page.dart';
+import 'Main_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,7 +16,7 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: mainpage(),
+      home: Mainpage(),
     );
   }
 }
